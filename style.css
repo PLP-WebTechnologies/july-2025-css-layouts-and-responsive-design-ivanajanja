@@ -1,0 +1,116 @@
+/* ===== Global Reset and Base Styles ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* ===== Header and Navigation (Flexbox) ===== */
+.site-header {
+  background-color: #007acc;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: 10px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.main-nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.main-nav a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Grid Layout for Main Area ===== */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  gap: 20px;
+  padding: 20px;
+}
+
+.sidebar {
+  background-color: #e0e0e0;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.main-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* ===== Flexbox for Cards ===== */
+.card-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: #f9f9f9;
+  padding: 15px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  text-align: center;
+  padding: 15px;
+  background-color: #007acc;
+  color: white;
+  margin-top: 20px;
+}
+
+/* ===== Responsive Design (Media Queries) ===== */
+@media (max-width: 1024px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .main-nav ul {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .main-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+
+  .card {
+    flex: 1 1 100%;
+  }
+}
